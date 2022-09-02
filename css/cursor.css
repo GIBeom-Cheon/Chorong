@@ -1,0 +1,41 @@
+html {
+  --color-texta: gold;
+  --color-textb: rgb(0, 0, 0);
+}
+header {
+  cursor: none ;
+}
+.cursor {
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--color-texta);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: transform, background-color ;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(20%);
+  background-size: cover;
+}
+.cursor-grow {
+  transform: scale(2);
+  background-color: gold;
+}
+.cursor-grow2 {
+  transform: scale(4);
+  background-color: gold;
+}
+.gnb li a:hover::after {
+  width: calc(100% - 2rem);
+  height: 3px;
+  background-size: contain; 
+}
+.hovered-link {
+  color: black !important;
+}
+.hovered-link::after {
+  background-image: url("../img/white_dot.svg");
+}
